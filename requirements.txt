@@ -1,0 +1,16 @@
+# UI 자동화
+playwright>=1.47
+pytest-playwright>=0.5.0
+
+# BDD
+pytest>=8.0
+pytest-bdd>=7.3.0
+
+# 환경변수 관리
+python-dotenv>=1.0.0
+
+# 리포트
+allure-pytest-bdd>=2.13.0
+
+# 타입힌트 (Python 3.10 미만 호환)
+typing-extensions>=4.0.0
