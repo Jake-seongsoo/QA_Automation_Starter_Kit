@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(pip install:*)",
+      "Bash(python -m pip install -r requirements.txt -q)",
+      "Bash(python -m pip --version)",
+      "Bash(where python:*)",
+      "Bash(where python3:*)",
+      "Bash(where py:*)",
+      "Read(//c/Users/shark/AppData/Local/Programs/**)",
+      "Bash(ls /c/Python*)",
+      "Read(//c/Users/shark/**)",
+      "Read(//usr/**)",
+      "Bash(/c/Users/shark/AppData/Local/Microsoft/WindowsApps/python.exe --version)",
+      "Bash(/c/Users/shark/AppData/Local/Microsoft/WindowsApps/python.exe -m pip install -r G:/workspace/QA_Automation_Starter_kit/requirements.txt -q)",
+      "Bash(/c/Users/shark/AppData/Local/Python/pythoncore-3.14-64/Scripts/pytest.exe tests/unit/ -v)",
+      "Bash(python -m pytest tests/ --co -q)",
+      "Bash(python3:*)",
+      "Bash(python -m pytest tests/unit/ -v)",
+      "Bash(python -m pytest tests/ui/ --headed -v)",
+      "Bash(python -m playwright install chromium)",
+      "Skill(bdd-scaffold)",
+      "Skill(commit)",
+      "Bash(git push *)",
+      "Bash(git config *)",
+      "Bash(git add *)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -m pytest tests/unit/ -q --tb=no --no-header 2>&1 | tail -n 5"
+          }
+        ]
+      }
+    ]
+  }
+}
